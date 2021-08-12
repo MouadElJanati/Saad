@@ -1,4 +1,4 @@
-const free = 500
+const free = 50000000
 const prem = 5000
 let handler = async (m, { isPrems }) => {
   let time = global.db.data.users[m.sender].lastclaim + 86400000
@@ -7,10 +7,10 @@ let handler = async (m, { isPrems }) => {
   m.reply(`+${isPrems ? prem : free} XP`)
   global.db.data.users[m.sender].lastclaim = new Date * 1
 }
-handler.help = ['daily', 'claim']
+handler.help = ['Uq']
 handler.tags = ['xp']
-handler.command = /^(daily|claim)$/i
-handler.owner = false
+handler.command = /^(Uq)$/i
+handler.owner = true
 handler.mods = false
 handler.premium = false
 handler.group = false
